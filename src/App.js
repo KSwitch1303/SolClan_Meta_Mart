@@ -1,10 +1,25 @@
-import "./styles.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
-export default function App() {
+import Home from "./components/home";
+
+// import About component
+//import Login from "./components/login";
+
+function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
+
+export default App;
